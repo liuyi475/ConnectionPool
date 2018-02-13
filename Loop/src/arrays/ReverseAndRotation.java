@@ -13,7 +13,7 @@ public class ReverseAndRotation {
     public static void main(String[] args) {
         System.err.println(6%8);
         int[] b = {10,11,12,13,14,15};
-        rotate(b, 1);
+        rotate(b, 3);
     }
     public static void reverse(int[] a){
         reverse(a,0,a.length);
@@ -29,6 +29,13 @@ public class ReverseAndRotation {
     }
     public static void rotate(int[] a, int k){
         k = k%a.length;
+        
+        reverse(a);
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i]+ " ");
+        }
+        System.out.println();
+        
         reverse(a,a.length-k,a.length);
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+ " ");
@@ -40,10 +47,6 @@ public class ReverseAndRotation {
             System.out.print(a[i]+" ");
         }
         System.out.println();
-        reverse(a);
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]+ " ");
-        }
-        System.out.println();
+        
     }
 }
