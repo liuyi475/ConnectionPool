@@ -6,6 +6,7 @@
 package arrayStack;
 
 import arrayStack.ArrayStack;
+import linkedStack.LinkedStack;
 
 /**
  *
@@ -14,12 +15,12 @@ import arrayStack.ArrayStack;
 public class StackDemo {
     public static void main(String[] args) {
         
-        ArrayStack<String> arrayStack = new ArrayStack<>();
+        LinkedStack<String> arrayStack = new LinkedStack<>();
         arrayStack.push("aaa");
         arrayStack.push("bbb");
         arrayStack.push("ccc");
         System.out.println(arrayStack.toString());
-//        System.out.println(arrayStack.size());
+        System.out.println(arrayStack.size());
         
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack.toString());
